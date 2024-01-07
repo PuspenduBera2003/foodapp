@@ -1,0 +1,53 @@
+.blurred-stack.left-blur::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 65px;
+    /* Adjust the width of the blurred area as needed */
+    left: 0;
+    right: auto;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
+    /* Adjust gradient as needed */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    /* Adjust the blur amount as needed */
+    z-index: 1;
+}
+
+.right-blur::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 65px;
+    /* Adjust the width of the blurred area as needed */
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff);
+    /* Adjust gradient as needed */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    /* Adjust the blur amount as needed */
+    z-index: 1;
+}
+
+.blurred-stack .both-blur::before,
+.both-blur::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 65px;
+    /* Adjust the width of the blurred area as needed */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
+    /* Adjust gradient as needed */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    /* Adjust the blur amount as needed */
+}
+
+.blurred-stack::after {
+    right: 0;
+    left: auto;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff);
+}

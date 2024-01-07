@@ -1,0 +1,9 @@
+body {
+    overflow: hidden;
+    max-height: 100vh;
+}
+
+.app {
+    overflow-y: auto;
+    max-height: 100vh;
+}
